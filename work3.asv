@@ -1,0 +1,8 @@
+function [ret]=work3(seed,n)
+ret=zeros(n,1);
+for i=1:n
+    seed=bitxor(seed,bitshift(seed,13,'int32'),'int64');
+    seed=bitxor(seed,bitshift(seed,-17,'int'),'int64');
+    seed=bitxor(seed,bitshift(seed,5,'int64'),'int64');
+    ret(i)=seed;
+end
