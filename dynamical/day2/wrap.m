@@ -1,3 +1,4 @@
+% wrap(課題番号)として使用
 function []=wrap(x)
 
 K=2;
