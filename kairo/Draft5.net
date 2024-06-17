@@ -1,0 +1,13 @@
+* C:\Users\thistle\projects\enshu-git\kairo\Draft5.asc
+V1 N002 0 PULSE(-0.1 0.1 0 1u 1u 1m 2m 10)
+R1 Vin N002 1p
+C1 Vc Vin 1p
+XU1 Vin 0 Vc opamp Aol=100K GBW=10Meg
+XU2 N001 0 Vout opamp Aol=100K GBW=10Meg
+R2 N001 Vc 7K
+R3 Vout N001 1
+.tran 0 20m 0 1u
+.lib "opamp.sub"
+.ic V(Vc)=0 V(Vin)=0 V(Vout)=0
+.backanno
+.end
