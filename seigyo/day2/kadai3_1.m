@@ -19,8 +19,8 @@ opts = bodeoptions;
 opts.PhaseWrapping = 'on';
 opts.PhaseWrappingBranch = -360;
 
-%bodeplot(L,{1e-1,1e3},'b',opts);
-nyquist(L)
+bodeplot(L,{1e-1,1e3},'b',opts);
+%nyquist(L)
 set(findall(gcf,'type','Line'),'LineWidth',1);
 set(findall(gcf,'type','Axes'),'FontSize',16);
 grid on;

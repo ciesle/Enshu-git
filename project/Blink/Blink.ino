@@ -15,7 +15,7 @@ signed char x = 0;
 signed char y = 0;                        
 static signed char r = 0;
 //Encoder myEnc(2,3);		//ロータリーエンコーダーに使う端子。
-
+//黒が下；
 const byte ROWS = 3;		//キーマトリクスの数設定
 const byte COLS = 3;
 

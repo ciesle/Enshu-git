@@ -1,0 +1,11 @@
+LTspice 24.0.12 for Windows
+Circuit: * C:\Users\thistle\projects\enshu-git\opamp\kadai1-5.asc
+Start Time: Thu Jun 20 14:35:07 2024
+solver = Normal
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = modified trap
+Direct Newton iteration for .op point succeeded.
+Total elapsed time: 0.066 seconds.
+
