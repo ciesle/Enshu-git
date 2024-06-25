@@ -1,6 +1,6 @@
 LTspice 24.0.12 for Windows
-Circuit: * C:\Users\thistle\projects\enshu-git\kairo\Draft5.asc
-Start Time: Mon Jun 17 13:34:12 2024
+Circuit: * C:\Users\Thistle\projects\univ\enshu-git\kairo\Draft5.asc
+Start Time: Mon Jun 17 20:32:08 2024
 solver = Normal
 Maximum thread count: 8
 tnom = 27
@@ -9,11 +9,7 @@ method = modified trap
 Direct Newton iteration for .op point succeeded.
 Ignoring empty pin current: Ix(u1:1)
 Ignoring empty pin current: Ix(u1:2)
-Ignoring empty pin current: Ix(u2:1)
-Ignoring empty pin current: Ix(u2:2)
 Ignoring empty pin current: Ix(u1:1)
 Ignoring empty pin current: Ix(u1:2)
-Ignoring empty pin current: Ix(u2:1)
-Ignoring empty pin current: Ix(u2:2)
-Total elapsed time: 0.451 seconds.
+Total elapsed time: 0.233 seconds.
 
