@@ -2,8 +2,8 @@
 #include "OptiMouse.h"
 #include "ADNS2083.h"
 
-#define Delta_X				0x03
-#define Delta_Y				0x04
+#define Delta_X				0x00
+#define Delta_Y				0x00
 
 ADNS2083::ADNS2083(uint8_t sclkPin, uint8_t sdioPin) : OptiMouse::OptiMouse(sclkPin, sdioPin){}
 
