@@ -1,5 +1,5 @@
-s=tf('s');
-function score = calc_score(x,y,k)
+function score = marathon(x,y,k)
+    s=tf('s');
     P=2/s/(s+2);
     K=k*(s+x(1))*(s+x(2))/(s+y(1))/(s+y(2));
     S=1/(1+P*K);
@@ -11,8 +11,41 @@ function score = calc_score(x,y,k)
     Tr=si.RiseTime;
     Ts=si.SettlingTime;
     Amax=si.Overshoot;
-    Kv=2*k*(-x(1))*(-x(2))/2/(-y(1))/(-y(2));
+    Kv=2*k*(x(1))*(x(2))/2/(y(1))/(y(2));
     
+    bode(P*K)
+
+    if 2<=Wgc && Wgc<=6
+    else
+        Wgc
+    end
+     if Gm < 10
+         Gm
+     end
+     if Pm < 45
+         Pm
+     end
+     if Kv <15
+         Kv
+     end
+     if Mrs>6 
+         Mrs
+     end
+     if Mr > 3.5
+         Mr
+     end
+     if Tr > 0.8
+         Tr
+     end
+     if Ts > 1.4
+         Ts
+     end
+     if Amax > 2
+         Amax
+     end
+
+end
+    %{
     sum=0;
     decs=10;
     if Wgc<2 sum=sum+(2-Wgc)/4;
@@ -55,7 +88,6 @@ function score = calc_score(x,y,k)
 
     return sum*sum;
 end
-
 function [k,x,y] = sa()
     k=0.23;
     x(1)=1.344;
@@ -79,3 +111,32 @@ function [k,x,y] = sa()
         
     end
 end
+warning('off','all')
+
+x=[1e-4;1e-0];
+for i = 1:50
+    for i2=1:50
+        y=[1e-4;1e-0];
+        for j = 1:50
+            for j2 = 1:50
+                k=1e-2;
+                for k = 1:50
+                    if calc_score(x,y,k)==1
+                        x
+                        y
+                        k
+                        return
+                    end
+                    k=k+k/10;
+                end
+                y(2)=y(2)+y(2)/10;
+            end
+            y
+            y(1)=y(1)+y(1)/10;
+        end
+        x
+        x(2)=x(2)+x(2)/10;
+    end
+    x(1)=x(1)+x(1)/10;
+end
+%}

@@ -1,0 +1,7 @@
+X=data.VarName1;
+Y=data.VarName2;
+U=data.VarName3;
+V=data(1:33,4);
+
+quiver(X,Y,U,V)
+axis equal

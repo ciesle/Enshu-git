@@ -9,6 +9,7 @@ OptiMouse::OptiMouse(uint8_t SCLK, uint8_t SDIO)
   pinMode (_sdioPin, INPUT);
 }
 
+
 void OptiMouse::begin(void)
 {
 	// Re-sync (see datasheet �5.4):

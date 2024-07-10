@@ -24,8 +24,7 @@ void setup() {
 
 
 void loop() {
-  //mouseControl();
-  Mouse.move(1,0,0);
+  mouseControl();
   delay(50);
 }
 
