@@ -2,4 +2,6 @@ s=tf('s');
 P=2/(s*(s+2));
 Kp=6.27+3.83/s+2.29*s;
 K=0.76482*(s+19.24)*(s+0.3238)/(s+1.074)/(s+4.439);
-bodeplot(P*K,'b'logspace());
+step(P*K/(1+P*K),'b');
+hold on;
+step(P*Kp/(1+P*Kp),'r');
